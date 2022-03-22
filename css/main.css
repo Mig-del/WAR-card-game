@@ -1,0 +1,20 @@
+
+
+
+button {
+    width: 270px;
+    height: 80px;
+    border: 0;
+    outline: none;
+    background: rgb(15, 141, 109);
+    color: black;
+    font-size: 22px;
+    border-radius: 40px;
+    text-align: center;
+    box-shadow: 0 6px 20px -5px rgba(0,0,0,0.7);
+}
+
+div {
+    display:grid;
+    grid-row: 2fr 2fr;
+}
