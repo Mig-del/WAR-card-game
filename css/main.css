@@ -1,7 +1,14 @@
 
+html {
+    background: url(https://t4.ftcdn.net/jpg/03/25/38/41/360_F_325384191_sg1D5lYWfRedGQsBm8xIHnsSAUUUVxGE.jpg);
+    background-size: cover;
+    
+}
 
 
 button {
+    
+    
     width: 270px;
     height: 80px;
     border: 0;
@@ -14,7 +21,18 @@ button {
     box-shadow: 0 6px 20px -5px rgba(0,0,0,0.7);
 }
 
-div {
-    display:grid;
-    grid-row: 2fr 2fr;
+footer {
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 2fr 2fr ;
+    height: 100vh;
+}
+
+.back {
+    margin-left: 50px;
 }
