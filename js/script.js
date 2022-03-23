@@ -15,92 +15,116 @@ console.log(cards);
 
 function shuffle(array) {
   array.sort(() => Math.random() - 0.5);
-
-  
 }
 shuffle(cards);
 
-  console.log(cards);
+console.log(cards);
 
-  let playerOneDeck = cards.slice(0, 26);
-  let playerTwoDeck = cards.slice(26);
+let playerOneDeck = cards.slice(0, 26);
+let playerTwoDeck = cards.slice(26);
 
-  console.log(playerOneDeck);
-  console.log(playerTwoDeck);
+console.log(playerOneDeck);
+console.log(playerTwoDeck);
 
-  // making cards to be random when start of the game
-  // 26 cards each player
+// making cards to be random when start of the game
+// 26 cards each player
 
-  const random = Math.floor(Math.random() * 25);
-  const playerOneValue = playerOneDeck[0].v;
-  const playerOneSuit = playerOneDeck[0].suit;
+let playerOneValue = playerOneDeck[0].v;
+let playerOneSuit = playerOneDeck[0].suit;
 
-  const playerTwoValue = playerTwoDeck[0].v;
-  const playerTwoSuit = playerTwoDeck[0].suit;
+let playerTwoValue = playerTwoDeck[0].v;
+let playerTwoSuit = playerTwoDeck[0].suit;
 // console.log(playerOneValue);
 // console.log(playerTwoValue);
-  document.body.onload = addElement;
+document.body.onload = addElement;
 
-  function addElement() {
-    // create a new div element for player 1
-    const newDiv = document.createElement("div");
-    newDiv.id = "playerOne";
+function addElement() {
+  // create a new div element for player 1
+  const newDiv = document.createElement("div");
+  newDiv.id = "playerOne";
 
-    const playerOneCard = document.createElement("img");
-    playerOneCard.setAttribute(
-      "src",
-      "./assets/images/" + playerOneSuit + "-" + playerOneValue + ".svg"
-    );
+  const playerOneCard = document.createElement("img");
+  playerOneCard.setAttribute(
+    "src",
+    "./assets/images/" + playerOneSuit + "-" + playerOneValue + ".svg"
+  );
+  playerOneCard.id = "playerOneCard";
 
-    newDiv.appendChild(playerOneCard);
+  newDiv.appendChild(playerOneCard);
 
-    const currentDiv = document.getElementById("div1");
-    document.body.insertBefore(newDiv, currentDiv);
+  const currentDiv = document.getElementById("div1");
+  document.body.insertBefore(newDiv, currentDiv);
 
-    // create a new div element for player 2
-    const div2 = document.createElement("div");
-    div2.id = "playerTwo";
+  // create a new div element for player 2
+  const div2 = document.createElement("div");
+  div2.id = "playerTwo";
 
-    const playerTwoCard = document.createElement("img");
-    playerTwoCard.setAttribute(
-      "src",
-      "./assets/images/" + playerTwoSuit + "-" + playerTwoValue + ".svg"
-    );
+  const playerTwoCard = document.createElement("img");
+  playerTwoCard.setAttribute(
+    "src",
+    "./assets/images/" + playerTwoSuit + "-" + playerTwoValue + ".svg"
+  );
+  playerTwoCard.id = "playerTwoCard";
 
-    div2.appendChild(playerTwoCard);
+  div2.appendChild(playerTwoCard);
 
-    const currentDiv2 = document.getElementById("div1");
-    document.body.insertBefore(div2, currentDiv2);
-  }
+  const currentDiv2 = document.getElementById("div1");
+  document.body.insertBefore(div2, currentDiv2);
+}
 
-  playerOneCard = playerOneDeck.shift();
+let playerOneCard = playerOneDeck.shift();
 
-  playerTwoCard = playerTwoDeck.shift();
-  cardsBeingPlayed = [];
+let playerTwoCard = playerTwoDeck.shift();
+cardsBeingPlayed = [];
 
 console.log(playerOneCard);
 console.log(playerTwoCard);
 
-//   while ((playerOneDeck.length > 0, playerTwoDeck.length > 0)) {
-    if (playerOneCard.v > playerTwoCard.v) {
-        console.log('playerOne wins');
-      cardsBeingPlayed.push(playerOneCard, playerTwoCard);
-      playerOneDeck.push(cardsBeingPlayed);
-    } else if (playerTwoCard.v > playerOneCard.v) {
-        console.log('playertwo wins')
-      cardsBeingPlayed.push(playerOneCard, playerTwoCard);
-      playerTwoDeck.push(cardsBeingPlayed);
-    } else if (playerOneCard.v === playerTwoCard.v) {
-        console.log('tie')
-      playerOneDeck.shift(cardsBeingPlayed);
-      playerTwoDeck.shift(cardsBeingPlayed);
-      playerOneCard.v > playerTwoCard.v;
-      cardsBeingPlayed.push(playerOneCard, playerTwoCard);
-      playerOneDeck.push(cardsBeingPlayed);
-    } 
-//   }
+function gameLogic() {
+  if (playerOneCard.v > playerTwoCard.v) {
+    console.log("playerOne wins");
+    playerOneDeck.push(playerOneCard, playerTwoCard);
+    // playerOneDeck.push(cardsBeingPlayed);
+  } else if (playerTwoCard.v > playerOneCard.v) {
+    console.log("playertwo wins");
+    playerTwoDeck.push(playerOneCard, playerTwoCard);
+    // playerTwoDeck.push(cardsBeingPlayed);
+  } else if (playerOneCard.v === playerTwoCard.v) {
+    console.log("tie");
+    playerOneDeck.push(playerOneCard);
+    playerTwoDeck.push(playerTwoCard);
+    // playerOneDeck.shift(cardsBeingPlayed);
+    // playerTwoDeck.shift(cardsBeingPlayed);
+    
+//     cardsBeingPlayed.push(playerOneCard, playerTwoCard);
+//     playerOneDeck.push(cardsBeingPlayed);
+      }
+}
+gameLogic();
 
+function draw() {
+  if (playerOneDeck.length == 0 || playerTwoDeck.length == 0) {
+    console.log("game over");
+  } else {
+    playerOneValue = playerOneDeck[0].v;
+    playerOneSuit = playerOneDeck[0].suit;
 
-let button = function onClick() {
-  document.getElementById("draw").click();
-};
+    playerTwoValue = playerTwoDeck[0].v;
+    playerTwoSuit = playerTwoDeck[0].suit;
+    let playerOneCardImg = document.getElementById("playerOneCard");
+    let playerTwoCardImg = document.getElementById("playerTwoCard");
+    playerOneCardImg.setAttribute(
+      "src",
+      "./assets/images/" + playerOneSuit + "-" + playerOneValue + ".svg"
+    );
+    playerTwoCardImg.setAttribute(
+      "src",
+      "./assets/images/" + playerTwoSuit + "-" + playerTwoValue + ".svg"
+    );
+    playerOneCard = playerOneDeck.shift();
+    playerTwoCard = playerTwoDeck.shift();
+    gameLogic();
+  } 
+  console.log(playerOneDeck)
+  console.log(playerTwoDeck)
+}
