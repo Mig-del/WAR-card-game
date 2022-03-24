@@ -34,5 +34,41 @@ body {
 }
 
 .back {
-    margin-left: 50px;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+#playerOne {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+#playerOneCard {
+    background: white;
+    border-radius: 5%;
+    width: 250px;
+    height: 350px;
+}
+
+#playerTwo {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+    
+}
+
+#playerTwoCard {
+    background: white;
+    border-radius: 5%;
+    width: 250px;
+    height: 350px;
+}
+
+
+
+h1 {
+    display: grid;
+    grid-row: 4fr.
 }

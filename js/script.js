@@ -75,7 +75,7 @@ function addElement() {
 let playerOneCard = playerOneDeck.shift();
 
 let playerTwoCard = playerTwoDeck.shift();
-cardsBeingPlayed = [];
+tieCards = [];
 
 console.log(playerOneCard);
 console.log(playerTwoCard);
@@ -83,20 +83,35 @@ console.log(playerTwoCard);
 function gameLogic() {
   if (playerOneCard.v > playerTwoCard.v) {
     console.log("playerOne wins");
+    if (tieCards.length > 0) {
+      tieCards.forEach(card => playerOneDeck.push(card));
+      tieCards = [];
+    }
     playerOneDeck.push(playerOneCard, playerTwoCard);
     // playerOneDeck.push(cardsBeingPlayed);
   } else if (playerTwoCard.v > playerOneCard.v) {
+    if (tieCards.length > 0) {
+      tieCards.forEach(card => playerTwoDeck.push(card));
+      tieCards = [];
+    }
     console.log("playertwo wins");
     playerTwoDeck.push(playerOneCard, playerTwoCard);
     // playerTwoDeck.push(cardsBeingPlayed);
   } else if (playerOneCard.v === playerTwoCard.v) {
     console.log("tie");
-    playerOneDeck.push(playerOneCard);
-    playerTwoDeck.push(playerTwoCard);
+    tieCards.push(playerOneCard, playerTwoCard);
+
+      // if (tieCards > 0){
+      //   forEach()
+      // }
+
+
+    // playerOneDeck.push(playerOneCard);
+    // playerTwoDeck.push(playerTwoCard);
     // playerOneDeck.shift(cardsBeingPlayed);
     // playerTwoDeck.shift(cardsBeingPlayed);
     
-//     cardsBeingPlayed.push(playerOneCard, playerTwoCard);
+    // cardsBeingPlayed.push(playerOneCard, playerTwoCard);
 //     playerOneDeck.push(cardsBeingPlayed);
       }
 }
