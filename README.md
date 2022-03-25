@@ -1,6 +1,8 @@
 ### README
 ## War Card Game
 
+https://mig-del.github.io/WAR-card-game/
+
 # Instruction on how to play:
 ##### ◉	  The shuffled deck is divided evenly between both players, each player reciving 26 cards which will be faced down.
 ##### ◉	  At the same time both players will draw a card facing up to display the value and suit.
