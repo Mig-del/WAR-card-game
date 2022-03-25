@@ -28,4 +28,5 @@ https://mig-del.github.io/WAR-card-game/
 
 
 <img width="551" alt="Screen Shot 2022-03-25 at 9 32 50 AM" src="https://user-images.githubusercontent.com/93844738/160162425-286e0592-051b-4d62-b3f6-cb17f2c10847.png">
-#### My wireframe of how I wanted my game to look at the beginning. 
+
+ #### My wireframe of how I wanted my game to look at the beginning. 
