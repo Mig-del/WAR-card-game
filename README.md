@@ -25,3 +25,7 @@ https://mig-del.github.io/WAR-card-game/
 
 ![Screen Shot 2022-03-24 at 10 45 38 PM](https://user-images.githubusercontent.com/93844738/160082865-9a2c51bf-ccfc-4c07-ace8-f9f7c4a76fc1.png)
 #### The draw button to start the next round. Restart button to start a new game.
+
+
+<img width="551" alt="Screen Shot 2022-03-25 at 9 32 50 AM" src="https://user-images.githubusercontent.com/93844738/160162425-286e0592-051b-4d62-b3f6-cb17f2c10847.png">
+#### My wireframe of how I wanted my game to look at the beginning. 
