@@ -11,6 +11,10 @@ https://mig-del.github.io/WAR-card-game/
 ##### ◉	  But if both cards from each player hold the same value, then you will Declare War.
 ##### ◉	  On a tie round each player will draw another card, cycle will continue until players draw a card with greatest value. Taking all the cards that were played in the tie round.
      
+## Technologies used:
+#### ◉ HTML
+#### ◉ CSS
+#### ◉ JavaScript
   
   ![Screen Shot 2022-03-24 at 10 46 55 PM](https://user-images.githubusercontent.com/93844738/160080726-13f8ccec-211e-415e-a3f3-7bc1002702c6.png)
 #### The name of the game following with the player who won.
