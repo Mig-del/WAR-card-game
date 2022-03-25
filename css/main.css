@@ -19,36 +19,27 @@ button {
 }
 
 footer {
-    display: flex;
-    position: absolute;
-    width: 100%;
-    position: fixed;
-    bottom: 0;
-    justify-content: space-evenly;
+  display: flex;
+  position: absolute;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  justify-content: space-evenly;
 }
 
-
-
 .back {
-  
-  
   margin-top: 50px;
   width: 300px;
-  
-  
-
-  
 }
 
 #playerOne {
-  
   justify-content: space-around;
   margin-top: 50px;
   width: 300px;
 }
 
 #playerOneCardImg {
-    display: flex; 
+  display: flex;
   background: white;
   border-radius: 5%;
   width: 250px;
@@ -56,13 +47,12 @@ footer {
 }
 
 #playerTwo {
-  
   justify-content: space-around;
   margin-top: 50px;
   width: 300px;
 }
 
-#playerTwoCardImg  {
+#playerTwoCardImg {
   background: white;
   border-radius: 5%;
   width: 250px;
@@ -73,6 +63,9 @@ h1 {
   display: grid;
   grid-row: 4fr;
   text-align: center;
+  font-family: "Special Elite", cursive;
+  font-size: 40px;
+  color: rgb(194, 174, 174);
 }
 
 #restart {
@@ -90,52 +83,57 @@ h1 {
 }
 
 #name-start {
-    width: 100%;
-    
+  width: 100%;
 }
 
 .container {
-    width:100%;
-    
-    max-width:600px;
-    border:4px solid black;
-    margin: 0 auto;
-    padding:10px;
-    
-    display: grid;
+  width: 100%;
+
+  max-width: 600px;
+  border: 4px solid black;
+  margin: 0 auto;
+  padding: 10px;
+
+  display: grid;
 }
 
 h2 {
-    text-align: center;
+  text-align: center;
 }
 
 .back-parent {
-    display: grid;
-    grid-template-columns: 300px 300px;
-    width: 100%;
-    
-
+  display: grid;
+  grid-template-columns: 300px 300px;
+  width: 100%;
 }
 
 #intro {
-    border: 2px solid black;
+  border: 2px solid black;
 }
 
 .winner {
-
 }
 
 .hideWinningMessage {
-    display: none;
+  display: none;
 }
 
 .game-container {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .card-backs {
-display: flex;
-flex-direction: row;
-justify-content: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#score {
+  text-align: center;
+  font-size: 25px;
+}
+
+#logo {
+  font-family: "Special Elite", cursive;
 }
