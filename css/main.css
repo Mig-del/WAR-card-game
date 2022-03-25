@@ -1,74 +1,141 @@
-
 html {
-    background: url(https://t4.ftcdn.net/jpg/03/25/38/41/360_F_325384191_sg1D5lYWfRedGQsBm8xIHnsSAUUUVxGE.jpg);
-    background-size: cover;
-    
+  background: url(https://t4.ftcdn.net/jpg/03/25/38/41/360_F_325384191_sg1D5lYWfRedGQsBm8xIHnsSAUUUVxGE.jpg);
+  background-size: cover;
+  height: 100%;
 }
 
-
 button {
-    
-    
-    width: 270px;
-    height: 80px;
-    border: 0;
-    outline: none;
-    background: rgb(15, 141, 109);
-    color: black;
-    font-size: 22px;
-    border-radius: 40px;
-    text-align: center;
-    box-shadow: 0 6px 20px -5px rgba(0,0,0,0.7);
+  width: 270px;
+  height: 80px;
+  border: 0;
+  outline: none;
+  background: rgb(15, 141, 109);
+  color: black;
+  font-size: 22px;
+  border-radius: 40px;
+  text-align: center;
+  box-shadow: 0 6px 20px -5px rgba(0, 0, 0, 0.7);
+  margin-bottom: 15px;
 }
 
 footer {
+    display: flex;
     position: absolute;
-    bottom: 30px;
     width: 100%;
+    position: fixed;
+    bottom: 0;
+    justify-content: space-evenly;
 }
 
-body {
-    display: grid;
-    grid-template-columns: 2fr 2fr ;
-    height: 100vh;
-}
+
 
 .back {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 50px;
+  
+  
+  margin-top: 50px;
+  width: 300px;
+  
+  
+
+  
 }
 
 #playerOne {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 50px;
+  
+  justify-content: space-around;
+  margin-top: 50px;
+  width: 300px;
 }
 
-#playerOneCard {
-    background: white;
-    border-radius: 5%;
-    width: 250px;
-    height: 350px;
+#playerOneCardImg {
+    display: flex; 
+  background: white;
+  border-radius: 5%;
+  width: 250px;
+  height: 350px;
 }
 
 #playerTwo {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 50px;
+  
+  justify-content: space-around;
+  margin-top: 50px;
+  width: 300px;
+}
+
+#playerTwoCardImg  {
+  background: white;
+  border-radius: 5%;
+  width: 250px;
+  height: 350px;
+}
+
+h1 {
+  display: grid;
+  grid-row: 4fr;
+  text-align: center;
+}
+
+#restart {
+  width: 200px;
+  height: 50px;
+  border: 0;
+  outline: none;
+  background: rgb(15, 141, 109);
+  color: black;
+  font-size: 15px;
+  border-radius: 40px;
+  text-align: center;
+  box-shadow: 0 6px 20px -5px rgba(0, 0, 0, 0.7);
+  margin-top: 20px;
+}
+
+#name-start {
+    width: 100%;
     
 }
 
-#playerTwoCard {
-    background: white;
-    border-radius: 5%;
-    width: 250px;
-    height: 350px;
+.container {
+    width:100%;
+    
+    max-width:600px;
+    border:4px solid black;
+    margin: 0 auto;
+    padding:10px;
+    
+    display: grid;
 }
 
+h2 {
+    text-align: center;
+}
 
-
-h1 {
+.back-parent {
     display: grid;
-    grid-row: 4fr.
+    grid-template-columns: 300px 300px;
+    width: 100%;
+    
+
+}
+
+#intro {
+    border: 2px solid black;
+}
+
+.winner {
+
+}
+
+.hideWinningMessage {
+    display: none;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-backs {
+display: flex;
+flex-direction: row;
+justify-content: center;
 }

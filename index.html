@@ -9,32 +9,51 @@
     <script defer src="js/script.js"></script>
   </head>
   <body>
-     <h1>WAR!</h1>
-     <div>
-    <div class="playerDeck">
-
-    </div>
-    <div class="playerCard"></div>
-    <div class="compareCard"></div>
-    <div class="compareDeck"></div>
-    <div class="restart"></div>
-    <div></div>
-    </div>
-    <div class="back-parent">
-    <div class="back"><img src="./assets/back-of-card.jpg" style="width: 250px; height: 350px; border-radius: 5%;"/></div>
-  
-    
-    </div>
-    
+    <div id="name-start">
+      <div class="container">
     <div>
-        <div class="back"><img src="./assets/back-of-card.jpg" style="width: 250px; height: 350px; border-radius: 5%;"/></div>
+      <h1>WAR!</h1>
+    </div>
+    <div id="intro">
+        <h2 id="winner">Draw to Start Game</h2>
+        <p id="score"></p>
       </div>
-      <footer>
-        <div>
-            <button onclick="draw()" id="draw">Draw!</button>
-        </div>
-      </footer>
-  </body>
- 
+    </div>
+  </div>
   
+    <div class="game-container">
+      <div class="card-backs">
+      <div class="back">
+        <img
+          src="./assets/back-of-card.jpg"
+          style="width: 250px; height: 350px; border-radius: 5%"/>
+      </div>
+      <div class="back">
+        <img
+          src="./assets/back-of-card.jpg"
+          style="width: 250px; height: 350px; border-radius: 5%"
+        />
+      </div>
+    </div>
+      <div class="card-backs" id="playingCardsDiv">
+
+      </div>
+    </div>
+
+</div>
+    
+    <footer>
+      <div>
+        <button onclick="draw()" id="draw" >Draw!</button>
+      </div>
+      <div>
+        <input
+          id="restart" class="buttons"
+          type="button"
+          value="Restart Game"
+          onClick="window.location.reload()"
+        />
+      </div>
+    </footer>
+  </body>
 </html>
