@@ -83,7 +83,7 @@ function gameLogic() {
     playerTwoDeck.push(playerOneCard, playerTwoCard);
   } else if (playerOneCard.v === playerTwoCard.v) {
     tieCards.push(playerOneCard, playerTwoCard);
-    document.getElementById("winner").innerHtml = "Tie! Draw Again!";
+    document.getElementById("winner").innerHTML = "Tie! Draw Again!";
   }
 }
 gameLogic();
